@@ -248,7 +248,7 @@ async function verify() {
       const bankBlock = (iban || bankName || bic) ? `
         <div class="bank-details">
           <h3>Банкова сметка</h3>
-          ${iban ? `<div class="detail-row"><span class="detail-label">IBAN</span><span class="detail-value" style="font-family:monospace">${escapeHtml(iban)}</span></div>` : ''}
+          ${iban ? `<div class="detail-row"><span class="detail-label">IBAN</span><span class="detail-value" style="font-family:monospace;font-size:0.8rem;white-space:nowrap">${escapeHtml(iban.replace(/(.{4})/g,'$1 ').trim())}</span></div>` : ''}
           ${bankName ? `<div class="detail-row"><span class="detail-label">Банка</span><span class="detail-value">${escapeHtml(bankName)}</span></div>` : ''}
           ${bic ? `<div class="detail-row"><span class="detail-label">BIC / SWIFT</span><span class="detail-value" style="font-family:monospace">${escapeHtml(bic)}</span></div>` : ''}
         </div>` : '';
