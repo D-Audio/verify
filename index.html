@@ -210,9 +210,9 @@ async function verify() {
   const t   = params.get('t');
   const d   = params.get('d');
   const sig = params.get('sig');
-  const iban     = params.get('iban');
-  const bankName = params.get('bank');
-  const bic      = params.get('bic');
+  const iban     = params.get('i');
+  const bankName = params.get('b');
+  const bic      = params.get('bc');
 
   if (!n || !t || !d || !sig) {
     content.innerHTML = `
